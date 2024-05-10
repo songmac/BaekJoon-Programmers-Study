@@ -1,3 +1,5 @@
+"""
+기본형
 def solution(a, b):
     A, B = str(a), str(b)
     int1, int2 = int(A+B), int(B+A) 
@@ -8,3 +10,7 @@ def solution(a, b):
         answer = int2
                    
     return answer
+"""
+
+def solution(a, b):
+    return max(int(f"{a}{b}"), int(f"{b}{a}"))
