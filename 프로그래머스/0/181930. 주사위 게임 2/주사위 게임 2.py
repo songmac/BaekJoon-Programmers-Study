@@ -1,3 +1,5 @@
+"""
+# 처음 풀이
 def solution(a, b, c):
     result = 0
     
@@ -10,3 +12,12 @@ def solution(a, b, c):
         else :
             pass
     return result
+"""
+
+
+# 다른 풀이
+def solution(a, b, c):
+    answer=a+b+c
+    if a==b or b==c or a==c: answer*=a**2+b**2+c**2
+    if a==b==c:answer*=a**3+b**3+c**3
+    return answer
