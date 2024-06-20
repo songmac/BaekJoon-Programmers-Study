@@ -1,3 +1,5 @@
+"""
+초기 코드
 def solution(num_list):
     
     odd_n = ''
@@ -10,3 +12,7 @@ def solution(num_list):
             even_n += str(n)
             
     return int(odd_n) + int(even_n)
+"""
+
+def solution(num_list):
+    return int(''.join([str(x) for x in num_list if x % 2])) + int(''.join([str(x) for x in num_list if not x % 2]))
