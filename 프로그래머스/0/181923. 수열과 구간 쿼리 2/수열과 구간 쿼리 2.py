@@ -1,3 +1,5 @@
+"""
+초기 풀이
 def solution(arr, queries):
     answer = []
     
@@ -13,3 +15,17 @@ def solution(arr, queries):
             answer.append(-1)
                 
     return answer
+"""
+
+def solution(arr, queries):
+    results = []
+    
+    for s, e, k in queries: 
+        result = [arr[i] for i in range(s, e+1) if arr[i] > k]
+
+        if result:
+            results.append(min(result))
+        else: 
+            results.append(-1)
+
+    return results
