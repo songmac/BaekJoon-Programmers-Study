@@ -1,0 +1,12 @@
+SELECT ITEM_INFO.ITEM_ID, ITEM_INFO.ITEM_NAME
+FROM ITEM_INFO 
+LEFT JOIN ITEM_TREE ON ITEM_INFO.ITEM_ID = ITEM_TREE.ITEM_ID 
+WHERE ITEM_TREE.PARENT_ITEM_ID IS NULL
+ORDER BY ITEM_INFO.ITEM_ID ASC
+;
+
+/*
+- LEFT JOIN은 기준 테이블의 모든 행을 포함하고,
+  조인 조건은 보통 "기준 테이블의 기본키 = 조인할 테이블의 외래키"로 설정
+- SELECT, WHERE, ORDER BY 등에서는 충돌 방지를 위해 테이블명.컬럼명 형식을 사용하는 것이 좋음
+*/
